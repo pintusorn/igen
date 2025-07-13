@@ -59,7 +59,7 @@ export default function RegisterPage() {
     interest: '',
     interests: [] as string[],
     igen_club: '',
-    profile_image_url: '/user.png' // Default avatar
+    profile_image_url: '/avatars/user.png' // Default avatar
   })
 
   const [newInterest, setNewInterest] = useState('')
