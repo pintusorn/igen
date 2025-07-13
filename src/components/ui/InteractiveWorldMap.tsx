@@ -27,7 +27,7 @@ const InteractiveWorldMap: React.FC<InteractiveWorldMapProps> = ({ igenCountries
       if (el) {
         el.setAttribute('style', 'cursor:pointer; transition:fill 0.2s;');
         el.setAttribute('fill', '#dc2626');
-        (el as SVGPathElement).onmouseenter = (e: any) => onCountryHover && onCountryHover(countryMap[id], e);
+        (el as SVGPathElement).onmouseenter = (e: MouseEvent) => onCountryHover && onCountryHover(countryMap[id], e as unknown as React.MouseEvent<SVGPathElement, MouseEvent>);
         (el as SVGPathElement).onmouseleave = () => onCountryLeave && onCountryLeave();
       }
     });

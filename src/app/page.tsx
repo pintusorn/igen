@@ -149,7 +149,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Founded with a vision to unite young people across cultures, iGEN began as a small community of passionate volunteers. Today, we've grown into a global movement that has touched thousands of lives through our innovative programs and initiatives.
+                  Founded with a vision to unite young people across cultures, iGEN began as a small community of passionate volunteers. Today, we&apos;ve grown into a global movement that has touched thousands of lives through our innovative programs and initiatives.
                 </p>
               </CardContent>
             </Card>
@@ -195,7 +195,7 @@ export default function Home() {
               iGEN Community
             </h2>
             <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover the vibrant community that makes iGEN special. Watch our story and see how we're making a difference together.
+              Discover the vibrant community that makes iGEN special. Watch our story and see how we&apos;re making a difference together.
             </p>
           </div>
 
@@ -333,7 +333,7 @@ export default function Home() {
                     ))}
                   </div>
                   <blockquote className="text-lg text-gray-700 mb-6 italic">
-                    "{reviews[currentReview].content}"
+                    &ldquo;{reviews[currentReview].content}&rdquo;
                   </blockquote>
                   <div>
                     <p className="font-semibold text-gray-900">{reviews[currentReview].name}</p>
