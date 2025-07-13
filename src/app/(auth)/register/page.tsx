@@ -59,7 +59,7 @@ export default function RegisterPage() {
     interest: '',
     interests: [] as string[],
     igen_club: '',
-    profile_image_url: '/avatars/user.png' // Default avatar
+    profile_image_url: '/avatars/avatar0.png' // Default avatar
   })
 
   const [newInterest, setNewInterest] = useState('')
@@ -193,6 +193,8 @@ export default function RegisterPage() {
         role: 'member',
         is_active: true
       }
+
+
 
       // Insert user data
       const { error: insertError } = await supabase

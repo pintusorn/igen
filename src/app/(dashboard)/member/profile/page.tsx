@@ -17,6 +17,7 @@ import { ProtectedRoute } from '@/components/auth/ProtectedRoute'
 import Link from 'next/link'
 import Image from 'next/image'
 
+
 // Helper to get rank and color
 function getRank(score: number) {
   if (score >= 50) return { label: 'Legend', bg: 'bg-red-100', text: 'text-red-800' }
@@ -45,6 +46,8 @@ export default function MemberProfilePage() {
     return null
   }
 
+
+
   return (
     <ProtectedRoute requiredRole="member">
       <div className="min-h-screen bg-gray-50 py-8">
@@ -62,7 +65,7 @@ export default function MemberProfilePage() {
                   <div className="flex justify-center mb-4">
                     <div className="w-24 h-24 rounded-full overflow-hidden">
                       {user.profile_image_url ? (
-                        <Image src={user.profile_image_url} alt="Profile" width={400} height={400} className="w-full h-full object-cover" />
+                        <Image src={user.profile_image_url} alt="Profile" width={96} height={96} className="w-full h-full object-cover" />
                       ) : (
                         <div className="w-full h-full bg-red-500 flex items-center justify-center text-white text-2xl font-bold">
                           <span>{user.firstname.charAt(0)}{user.lastname.charAt(0)}</span>
