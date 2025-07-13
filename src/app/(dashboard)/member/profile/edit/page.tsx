@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, Fragment, Suspense } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
 import { createClient } from '@/lib/supabase/client'
@@ -23,7 +23,7 @@ function getRank(score: number) {
 export default function EditMemberProfilePage() {
   const { user, updateUser } = useAuth()
   const router = useRouter()
-  const supabase = createClient()
+  // const supabase = createClient() // Unused variable
   const [formData, setFormData] = useState<Partial<User> | null>(null)
   const [avatarModalOpen, setAvatarModalOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -58,15 +58,14 @@ export default function EditMemberProfilePage() {
       await updateUser({ ...formData })
       setSuccess('Profile updated!')
       setTimeout(() => router.push('/member/profile'), 1500)
-    } catch (err: any) {
+    } catch (err: unknown) {
       setError(err.message)
     } finally {
       setIsLoading(false)
     }
   }
 
-  // Avatar list for modal
-  const avatarList = Array.from({ length: 20 }, (_, i) => `/avatars/avatar${i + 1}.png`)
+  // Avatar list for modal - used in the modal component below
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">

@@ -8,11 +8,6 @@ import { useAuth } from '@/contexts/AuthContext'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import {
-  UserIcon,
-  EnvelopeIcon,
-  PhoneIcon,
-  AcademicCapIcon,
-  BriefcaseIcon,
   XMarkIcon,
   PlusIcon
 } from '@heroicons/react/24/outline'
@@ -72,7 +67,7 @@ export default function RegisterPage() {
   const [showManualNationality, setShowManualNationality] = useState(false)
 
   // Handle form input changes
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = (field: string, value: string | number | boolean) => {
     setFormData(prev => ({
       ...prev,
       [field]: value

@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
-import { EnvelopeIcon, LockClosedIcon, UserIcon } from '@heroicons/react/24/outline'
+import { LockClosedIcon, UserIcon } from '@heroicons/react/24/outline'
 
 export default function LoginPage() {
   const { login, loading, isAuthenticated, user } = useAuth()
@@ -129,12 +129,12 @@ export default function LoginPage() {
               </div>
 
               <div className="text-center">
-                <p className="text-sm text-gray-600">
-                  Don't have an account?{' '}
-                  <Link href="/register" className="font-medium text-red-600 hover:text-red-500">
-                    Register here
-                  </Link>
-                </p>
+                                  <p className="text-sm text-gray-600">
+                    Don&apos;t have an account?{' '}
+                    <Link href="/register" className="font-medium text-red-600 hover:text-red-500">
+                      Register here
+                    </Link>
+                  </p>
               </div>
             </form>
           </CardContent>
